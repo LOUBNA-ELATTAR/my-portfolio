@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,11 +27,6 @@
                 <li class="nav__item">
                     <a href="#Qualification" class="nav__link" id="nav-education">
                         <i class="uil uil-file-alt nav__icon"></i> Education
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#connect" class="nav__link" id="nav-connect">
-                        <i class="uil uil-file-alt nav__icon"></i> Connect with me
                     </a>
                 </li>
                 <li class="nav__item">
@@ -114,7 +109,7 @@
         <div class="about__container container grid">
             <img src="assets/img/loubna.jpg" alt="" class="about__img">
             <div class="about__data">
-                <p class="about__description" id="about-description">Passionate about the world of Data Science, I thrive on the challenges it presents and the opportunities it unlocks. 
+                <p class="about__description" id="about-descriptionn">Passionate about the world of Data Science, I thrive on the challenges it presents and the opportunities it unlocks. 
                     With a relentless curiosity and an analytical mindset, I'm always eager to explore new techniques, datasets, and technologies. 
                     Whether it's predictive modeling, machine learning, or data visualization, I find joy in uncovering hidden patterns and telling stories through data.</p>
                 <div class="about__buttons">
@@ -340,7 +335,7 @@
 
  let languageContent = {
   "en": {
-    "home-title": "Home",
+    "home-title": "LOUBNA EL ATTAR",
     "about-title": "About Me",
     "nav-home": "Home",
     "nav-about": "About",
@@ -350,7 +345,7 @@
     "nav-skills": "Skills",
     "nav-projects": "Projects",
     "nav-contact": "Contact Me",
-    "about-description": "Passionate about the world of data science, I thrive on the challenges it presents and the opportunities it opens up. With an unwavering curiosity and analytical mindset, I am always eager to explore new techniques, datasets, and technologies. Whether it's predictive modeling, machine learning, or data visualization, I find joy in uncovering hidden patterns and telling stories through data.",
+    "about-descriptionn": "Passionate about the world of data science, I thrive on the challenges it presents and the opportunities it opens up. With an unwavering curiosity and analytical mindset, I am always eager to explore new techniques, datasets, and technologies. Whether it's predictive modeling, machine learning, or data visualization, I find joy in uncovering hidden patterns and telling stories through data.",
     "master": "Master's in International Computer Science",
     "isima": "University of Clermont Auvergne, ISIMA",
     "iagi": "Diplôme d'ingénieur in Artificial Intelligence and Computer Engineering",
@@ -379,17 +374,17 @@
     "clickhere": "Click here"
   },
   "fr": {
-    "home-title": "Accueil",
+    "home-title": "LOUBNA EL ATTAR",
     "about-title": "À propos de moi",
     "nav-home": "Accueil",
     "nav-about": "À propos",
-    "home-subtitle": "Étudiant en IA et informatique",
-    "home-description": "Je suis un étudiant poursuivant un double diplôme en IA et informatique, animé par une profonde passion pour le monde de la science des données.",
+    "home-subtitle": "Étudiante en IA & Génie Informatique",
+    "home-description": "Je suis une étudiante poursuivant une double diplômation en France, animée par une profonde passion pour le monde de la Data Science.",
     "nav-education": "Éducation",
     "nav-skills": "Compétences",
     "nav-projects": "Projets",
     "nav-contact": "Contactez-moi",
-    "about-description": "Passionnée par le monde de la science des données, je prospère dans les défis qu'il présente et les opportunités qu'il ouvre. Avec une curiosité inébranlable et un esprit analytique, je suis toujours désireuse d'explorer de nouvelles techniques, des ensembles de données et des technologies. Que ce soit la modélisation prédictive, l'apprentissage automatique ou la visualisation des données, je trouve de la joie à découvrir des motifs cachés et à raconter des histoires à travers les données.",
+    "about-descriptionn": "Passionnée par le monde de la science des données, je prospère dans les défis qu'il présente et les opportunités qu'il ouvre. Avec une curiosité inébranlable et un esprit analytique, je suis toujours désireuse d'explorer de nouvelles techniques, des ensembles de données et des technologies. Que ce soit la modélisation prédictive, l'apprentissage automatique ou la visualisation des données, je trouve de la joie à découvrir des motifs cachés et à raconter des histoires à travers les données.",
     "master": "Master en informatique internationale",
     "isima": "Université de Clermont Auvergne, ISIMA",
     "iagi": "Diplôme d'ingénieur en Intelligence Artificielle et Génie Informatique",
@@ -430,59 +425,292 @@
     let projects = document.getElementById("portfolio");
     let contact = document.getElementById("contact");
 
-function switchLang(lang) {
+ // Function to change the language and update content
+ function switchLang(lang) {
     for (let key in languageContent[lang]) {
-        document.getElementById(key).innerHTML = languageContent[lang][key];
+      document.getElementById(key).textContent = languageContent[lang][key];
     }
-}
-      
-function removeClass() {
-    getHome.classList.remove('selected');
-    getAbout.classList.remove('selected');
-    getEducation.classList.remove('selected');
-    getProjects.classList.remove('selected');
-    getContact.classList.remove('selected');
-    about.classList.remove('view');
-    home.classList.remove('view');
-    projects.classList.remove('view');
-    contact.classList.remove('view');
-}
+    // Update content based on the selected language
+    for (let link in navigationLinks) {
+      const sectionId = navigationLinks[link];
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.classList.remove('view');
+      }
+    }
+    const selectedLink = document.querySelector('.nav__link.selected');
+    if (selectedLink) {
+      selectedLink.classList.remove('selected');
+    }
+  }
 
-getAbout.addEventListener('click', function (e) {
-    if (window.innerWidth > 1040) {
+  // Add click event listeners to navigation links
+  for (let link in navigationLinks) {
+    const navLink = document.getElementById(link);
+    if (navLink) {
+      navLink.addEventListener('click', function (e) {
         e.preventDefault();
-        removeClass();
-        about.classList.add('view');
-        getAbout.classList.add('selected');
+        const sectionId = navigationLinks[link];
+        const section = document.getElementById(sectionId);
+        if (section) {
+          // Close the mobile menu if open
+          document.getElementById('nav-close').click();
+
+          // Scroll to the selected section
+          window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
+
+          // Highlight the selected link
+          const selectedLink = document.querySelector('.nav__link.selected');
+          if (selectedLink) {
+            selectedLink.classList.remove('selected');
+          }
+          navLink.classList.add('selected');
+        }
+      });
     }
-
-});
-getResume.addEventListener('click', function (e) {
-    if (window.innerWidth > 1040) {
-        e.preventDefault();
-        removeClass();
-        resume.classList.add('view');
-        getResume.classList.add('selected');
-    }
-})
-getProjects.addEventListener('click', function (e) {
-    if (window.innerWidth > 1040) {
-        e.preventDefault();
-        removeClass();
-        projects.classList.add('view');
-        getProjects.classList.add('selected');
-    }
-})
-
-getContact.addEventListener('click', function (e) {
-    if (window.innerWidth > 1040) {
-        e.preventDefault();
-        removeClass();
-        contact.classList.add('view');
-        getContact.classList.add('selected');
-    }
-})
+  }
+</script> -->
 
 
 
-</script>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8" />
+      <meta name ="viewport" content="width = device-width, initial-scale = 1" >
+      <title>CV</title>
+      <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans" />
+      <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+          crossorigin="anonymous" />
+      <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+<body> 
+	
+	
+    <div class="background gradient">
+    </div>
+    <div class="page">
+        <header>
+            <nav>
+				<a id = "languageSwitcher">
+				  <button onclick = "switchLang('en')"> English </button>
+				  <button onclick = "switchLang('de')"> French </button>
+				</a>
+				
+                <a href="#about" class="selected" id='getAbout'>
+                    <span class="fas fa-user"></span>
+                    <span class="link" id="aboutme">About Me</span>
+                </a>
+                <a href="#resume" id='getResume'>
+                    <span class="fas fa-file"></span>
+                    <span class="link" id="myresume">Resume</span>
+                </a>
+				<a href="#projects" id='getProjects'>
+                    <span class="fab fa-github"></span>
+                    <span class="link" id="myprojects">Projects</span>
+                </a>
+				<a href="#contact" id='getContact'>
+                    <span class="fas fa-at"></span>
+                    <span class="link" id="mycontact">Contact</span>
+                </a>
+            </nav>
+			
+        </header>
+        <main>
+            <section id="presentation" class="profile">
+                <div class="profile-background"></div>
+				
+                <div>
+                    <div class="profile-image">
+                        <img src="loubna.jpg" alt="Loubna El Attar">
+                    </div>
+                    <h1 class="profile-name" id="nombre">Loubna El Attar</h1>
+                    <h2 class="profile-profession" id="profession">AI & Computer Science Student</h2>
+                    <div class="profile-social" id="profile-social">
+                        <a href="https://github.com/LOUBNA-ELATTAR" target="_blank" class="fab fa-github"></a>
+                        <a href="https://www.linkedin.com/in/loubna-el-attar/" target="_blank" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+                <div class="profile-buttons">
+                    <a href="loubna.pdf" id="downloadCV" download target="_blank">DOWNLOAD CV <i class="fas fa-download"></i></a>
+                    <a href="mailto: loubnaelattar0@gmail.com" id="sendemail">SEND EMAIL<i class="fas fa-reply"></i></a>
+                </div>
+            </section>
+            <section id="about" class="about view">
+                <article class="about-aboutMe">
+                    <h3 class="title" id="aboutaboutme">About Me</h3>
+                    <div class="line-left" id="aboutmetext">
+                  <p>Passionate about the world of Data Science, I thrive on the challenges it presents and the opportunities it unlocks. 
+                    With a relentless curiosity and an analytical mindset, I'm always eager to explore new techniques, datasets, and technologies. 
+                    Whether it's predictive modeling, machine learning, or data visualization, I find joy in uncovering hidden patterns and telling stories through data
+						</p>
+                       
+                    </div>
+                </article>
+				<article class="resume-skills">
+                    <h3 class="title" id="skills">Languages & Skills</h3>
+                    <div>
+                        <section class="line-left">
+                            <h4 class="line-down" id="languages"> <i class="fas fa-tv"></i> LANGUAGES</h4>
+                            <div class="line-down">
+                                <div class="cert" id="english">English </div>
+                                <div>
+                                    <div style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="line-down">
+                                <div class="cert" id="german">French </div>
+                                <div>
+                                    <div style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="line-down">
+                                <div class="cert" id="spanish">Spanish </div>
+                                <div>
+                                    <div style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="hungarian">Arabic</div>
+                                <div>
+                                    <div style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="line-left">
+                            <h4 class="line-down" id="coding"><i class="fas fa-code"></i> Skills</h4>
+                            
+                                <div>Scikit-learn, TensorFlow, Keras, PyTorch, NLP </div>
+								<div>Database administration and Management </div>
+								<div>Python, R, C, C#, Java, Matlab, UNIX Shell</div>
+								<div>Power BI, Power Apps</div>
+                        </section>
+                    </div>
+                </article>
+				
+            </section>
+            <section id="resume" class="resume">
+                <h3 class="title" id="myResume">Resume</h3>
+                <article class="resume-lines">
+                    <section class="resume-line line-left">
+                        <h4 class="line-down" id="experience"> <i class="fas fa-briefcase"></i> Experience</h4>
+                        <article class="line-down">
+                            <div class="date active" id="dateactive">From 15/06/23 to 15/08/23</div>
+                            <h5 class="name" id="swdev">AI & Web Developer Intern</h5>
+                            <h6 class="company">World Wide Progress</h6>
+                            <p id="sap">Developed a resume screening-focused recruitment platform, optimized the recruitment process by automating the selection of candidates using NLP.</p>
+                        </article>
+                        <article class="line-down">
+                            <div class="date">From 01/11/22 to 01/01/23</div>
+                            <h5 class="name" id="cashapp">Web Developer Intern</h5>
+                            <h6 class="company">ENSAM</h6>
+                            <p id="sanofi">Conceived, developed, and deployed a self-learning platform 212.</p>
+                        </article>
+                        <article>
+                            <div class="date">From 02/08/22 to 03/09/22</div>
+                            <h5 class="name" id="proclead">Web Developer Intern</h5>
+                            <h6 class="company">RFITech Sarl</h6>
+                            <p id="diageo1">Conceived and implementated an E-Invoicing web application.</p>
+                        </article>
+						<article>
+                            <div class="date">From 01/05/22 to 01/07/22</div>
+                            <h5 class="name" id="imprspec">Web Developer Intern</h5>
+                            <h6 class="company">ENSAM</h6>
+                            <p id="diageo2">Designed and developed an E-Learning platform ECA Skills.</p>
+                        </article>
+                    </section>
+                    <section class="resume-line line-left">
+                        <h4 class="line-down" id="education"> <i class="fas fa-university"></i> Education</h4>
+                        <article class="line-down">
+                            <div class="date">2023 - Present</div>
+                            <h5 class="name" id="javadev">M2 ICS</h5>
+                            <h6 class="company" id="hungary">Clermont-Ferrand, France</h6>
+                            <p id="progma">ISIMA, Clermont Auvergne University</p>
+                        </article>
+                        <article class="line-down">
+                            <div class="date">2019 - Present</div>
+                            <h5 class="name" id="businessadm">Diplôme d'Ingénieur in Artificial Intelligence & Computer Engineering</h5>
+                            <h6 class="company" id="colombia">Casablanca, Morocco</h6>
+                            <p>L'Ecole Nationale Supérieure d'Arts et Métiers, Hassan 2 University</p>
+                        </article>
+                        <article>
+                            <div class="date">2019</div>
+                            <h5 class="name" id="bachelor">Baccalaureate in Mathematics</h5>
+                            <h6 class="company" id="hungary1">Temara, Morocco</h6>
+                            <p>Madariss Maria</p>
+                        </article>
+						<h4 class="line-down" id="certificates"> <i class="fas fa-university"></i> Some Certificates</h4>
+                        <article class="line-down">
+                            <div class="date">2023</div>
+                            <h5 class="name" id="selenium">AWS Academy Cloud Foundations</h5>
+                            <h6 class="company">AWS</h6>
+                        </article>
+                        <article class="line-down">
+                            <div class="date">2022</div>
+                            <h5 class="name" id="javaback">Teamwork Skills: Communicating Effectively</h5>
+                            <h6 class="company">Coursera</h6>
+                        </article>
+						<article class="line-down">
+                            <div class="date">2021</div>
+                            <h5 class="name" id="istqbtester">HCIA - 5G</h5>
+                            <h6 class="company">Huawei</h6>
+                        </article>
+                    </section>
+                </article>
+            </section>
+            <section id="projects" class="projects">
+              <article class="about-services">
+                    <h3 class="title" id="myproj">My Projects</h3>
+                    <div class="line-left">
+						<article class="line-down">
+                            <div class="fas fa-link"></div>
+                            <h4>Detection of Phishing URLs</h4> 
+                            <p id="testingproject">Implementation of multiple classifiers to detect phishing URLs, effectively identifying patterns and enhancing online security</p>
+                        </article>
+                        <article class="line-down">
+                            <div class="fas fa-chart-bar"></div>
+                            <h4>Employee Churn Prediction using ANN</h4> 
+                            <p id="javaproject">Implementation of an Artificial Neural Network model to predict employee churn, successfully identifying patterns and factors influencing employee decisions to leave the organization.</p>
+                        </article>
+						<article class="line-down">
+                            <div class="fas fa-pills"></div>
+                            <h4>“PillPal” Robot</h4> 
+                            <p id="htmlproject">Creation of a connected robot endowed with IoT and AI technologies that automatically dispenses pills on time.</p>
+                        </article>
+                        <article class="line-down">
+                            <div class="fas fa-code"></div>
+                            <h4>“The Pen and the Mind”, a blogging website</h4> 
+							<a href="https://youtu.be/kFD7UaT58Qk?si=BiS9SfB42-T8BN5o" target="_blank" class="fab fa-youtube"></a>
+                            <p id="sqlproject">Development of a blogging website using Angular and Laravel technologies.</p>
+                        </article>
+                        <article class="line-down">
+                            <div class="fas fa-code"></div>
+                            <h4>“Learn IT”, a JEE e-learning website</h4> 
+							<a href="https://youtu.be/Sz5Vwfvg2w4?si=1NLUsfoeK8K6u9EZ" target="_blank" class="fab fa-youtube"></a>
+                            <p id="jeeproject">Development of a JEE e-learning website using React and Spring MVC.</p>
+                        </article>
+                    </div>
+                </article>
+              
+			  
+            </section>
+			
+            <section id="contact" class="contact">
+              <h3 class="title" id="getintouch">Get in Touch</h3>
+              <div class="contact-information line-left">
+                <div>
+                  <span>EMAIL : </span>   loubnaelattar0@gmail.com
+				  <span id="phone"><br><br>PHONE : </span> +33780562147
+                </div>
+                
+              </div>
+            </section>
+        </main>
+    </div>
+	<script src="javascript.js"></script>
+</body>
+
+</html>
