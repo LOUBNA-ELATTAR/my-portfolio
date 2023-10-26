@@ -1,480 +1,4 @@
-<!-- <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Loubna EL ATTAR</title>
-</head>
-<body>
-    <header class="header" id="header">
-    <nav class="nav container">
-        <a href="#" class="nav__logo" id="nav-logo">LOUBNA EL ATTAR</a>
-        <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list grid">
-                <li class="nav__item">
-                    <a href="#home" class="nav__link" id="nav-home">
-                        <i class="uil uil-estate nav__icon"></i> Home
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#about" class="nav__link selected" id="nav-about">
-                        <i class="uil uil-user nav__icon"></i> About
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#Qualification" class="nav__link" id="nav-education">
-                        <i class="uil uil-file-alt nav__icon"></i> Education
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#portfolio" class="nav__link" id="nav-projects">
-                        <i class="uil uil-scenery nav__icon"></i> Projects
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#contact" class="nav__link" id="nav-contact">
-                        <i class="uil uil-message nav__icon"></i> Contact me
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a id="languageSwitcher" class="nav__link">
-                      <button onclick="switchLang('en')"> English </button>
-                      <button onclick="switchLang('fr')"> Français </button>
-                    </a>
-                </li>
-            </ul>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
-        </div>
-        <div class="nav__btns">
-            <i class="uil uil-moon change-theme" id="theme-button"></i>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="uil uil-apps"></i>
-            </div>
-        </div>
-    </nav>
-    </header>
-    <main class="main">
-    <section class="home section" id="home">
-        <div class="home__container container grid">
-            <div class="home__content grid">
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/loubna-el-attar/" target="__blank" class="home__social-icon">
-                        <i class="uil uil-linkedin-alt"></i>
-                    </a>
-                    <a href="https://github.com/LOUBNA-ELATTAR" target="__blank" class="home__social-icon">
-                        <i class="uil uil-github-alt"></i>
-                    </a>
-                </div>
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="10 0 180 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                            <image class="home__blob-img" x='0' y='0' href="assets/img/loubna1.jpg"/>
-                        </g>
-                    </svg>
-                </div>
-                <div class="home__data">
-                    <h1 class="home__title" id="home-title">Loubna El Attar</h1>
-                    <h3 class="home__subtitle" id="home-subtitle">AI & Computer Science Student</h3>
-                    <p class="home__description" id="home-description">I'm a student pursuing a dual degree in AI and Computer Science, fueled by a deep passion for the world of Data Science.</p>
-                    <a href="#contact" class="button button--flex" id="home-contact-button">
-                        Contact Me  <i class="uil uil-message button__icon"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="home__scroll">
-                <a href="#about" class="home__scroll-button button--flex">
-                    <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                    <span class="home__scroll-name" id="home-scroll-name">Scroll-Down</span>
-                    <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section class="about section" id="about view">
-        <h2 class="section_title" data-translation="section_title" id="about-title">ABOUT ME</h2>
-
-        <div class="about__container container grid">
-            <img src="assets/img/loubna.jpg" alt="" class="about__img">
-            <div class="about__data">
-                <p class="about__description" id="about-descriptionn">Passionate about the world of Data Science, I thrive on the challenges it presents and the opportunities it unlocks. 
-                    With a relentless curiosity and an analytical mindset, I'm always eager to explore new techniques, datasets, and technologies. 
-                    Whether it's predictive modeling, machine learning, or data visualization, I find joy in uncovering hidden patterns and telling stories through data.</p>
-                <div class="about__buttons">
-                    <a download="" href="assets/pdf/LOUBNA.pdf" class="button button--flex" id="about-download-button">
-                        Download my CV <i class="uil uil-download-alt button__icon"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-        <section class="qualification section" id="Qualification">
-            <h2 class="section_title" id="education">Education</h2>
-            <div class="qualification__container container">
-                <div class="qualificatiion__sections">
-                    <div class="qualification__content qualification__active" data-content id="education">
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title" id="master">Master M2 International of computer science</h3>
-                                <span class="qualification__subtitle" id="isima">ISIMA, Clermont Auvergne University</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>2023 - Present
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__lone"></span>
-                            </div>
-                        </div>
-                        <div class="qualification__data">
-                            <div></div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__lone"></span>
-                            </div>
-                            <div>
-                                <h3 class="qualification__title" id="iagi">Diplôme d'Ingénieur in Artificial Intelligence & Computer Engineering</h3>
-                                <span class="qualification__subtitle" id="ensam">L'Ecole Nationale Supérieure d'Arts et Métiers Casablanca (Morocco)</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>2019 - Present
-                                </div>
-                            </div>
-                        </div>
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title" id="bac">Baccalaureate in Mathematics</h3>
-                                <span class="qualification__subtitle" id="maria">Lycée Madariss Maria, Temara (Morocco)</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>2019
-                                </div>
-                            </div>
-                             <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__lone"></span>
-                            </div>
-                            </div>    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section_title" id="myprojects">My projects</h2>
-            <span class="section_subtitle"></span>
-            <div class="portfolio__container container swiper-container mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/5.png" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <div class="portfolio__title" id="phishing">Detection of Phishing URLs</div>
-                            <p class="portfolio__description" id="phishing-desc">Implementation of an ML model to detect phishing URLs, effectively identifying patterns and enhancing online security</p>
-
-                            <a href=" " target="__blank" class="button button--flex button--small portfolio__button" id="clickhere">
-                                Click here 
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/pillpal.jpg" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <div class="portfolio__title" id="pillpal">“PillPal” Robot</div>
-                            <p class="portfolio__description" id="pillpaldesc">Creation of a connected robot endowed with IoT and AI technologies that automatically dispenses pills on time.</p>
-
-                            <a href="https://www.moroccoworldnews.com/2022/06/349500/pillpal-moroccan-automated-medication-robot-wins-an-african-award" target="__blank" class="button button--flex button--small portfolio__button" id="clickhere">
-                                Click here 
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>          
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/2.png" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <div class="portfolio__title" id="churn">Employee Churn Prediction using ANN</div>
-                            <p class="portfolio__description" id="churndesc">Implementation of an Artificial Neural Network model to predict employee churn, successfully identifying patterns and factors influencing employee decisions to leave the organization.</p>
-                        </div>
-                    </div>              
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/1.png" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <div class="portfolio__title" id="cvscreening">CV-Screening recruitment platform</div>
-                            <p class="portfolio__description" id="cvscreeningdesc">Development of a resume screening-focused recruitment platform: Process optimization using NLP.</p>
-
-                            <a href="https://youtu.be/OIJiBxT0g0Q?si=aKIZ7neuffQYaZdd" target="__blank" class="button button--flex button--small portfolio__button" id="clickhere">
-                                Click here 
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/pen-mind.PNG" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <div class="portfolio__title" id="penmind">“The Pen and the Mind”, a blogging website</div>
-                            <p class="portfolio__description" id="penminddesc">Development of a blogging website using Angular and Laravel technologies</p>
-
-                            <a href="https://youtu.be/kFD7UaT58Qk?si=BiS9SfB42-T8BN5o" target="__blank" class="button button--flex button--small portfolio__button" id="clickhere">
-                                Click here 
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/learnit.png" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <div class="portfolio__title" id="learnit">“Learn IT”, a JEE e-learning website</div>
-                            <p class="portfolio__description" id="learnitdesc">Development of a JEE e-learning website using React and Spring MVC</p>
-
-                            <a href="https://youtu.be/Sz5Vwfvg2w4?si=1NLUsfoeK8K6u9EZ" target="__blank" class="button button--flex button--small portfolio__button" id="clickhere">
-                                Click here 
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/4.png" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <div class="portfolio__title" id="hala">“Hala 22”, a React website</div>
-                            <p class="portfolio__description" id="haladesc">Development of a Qatar 2022 World Cup website using React</p>
-
-                            <a href="https://youtu.be/py40uBDBQzY?si=nuDlTtjWyeKePHl3" target="__blank" class="button button--flex button--small portfolio__button" id="clickhere">
-                                Click here 
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-        <section class="contact section" id="contact">
-            <h2 class="section_title" id="contactme">Contact-Me</h2>
-            <span class="section_subtitle" id="gettouch">Get in touch</span>
-            <div class="contact__container container grid">
-                <div>
-                    <div class="contact__infomation">
-                        <i class="uil uil-phone contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title" id="callme">Call Me</h3>
-                            <span class="contact_subtitle">+33780562147</span>
-                        </div>
-                    </div>
-                    <div class="contact__infomation">
-                        <i class="uil uil-envelope contact__icon"></i>
-                        <div>
-                            <h3 class="contact__title" id="email">Email</h3>
-                            <span class="contact_subtitle">loubnaelattar0@gmail.com</span>
-                        </div>
-                    </div>
-                </div>         
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h3 class="footer__title">Loubna El Attar</h3>
-                    <span class="footer__subtitle" id="aicompsci student">AI & Computer Science Student</span>
-                </div>
-                <ul class="footer__links">
-                    <li>
-                        <a href="#portfolio" class="footer__link" id="projets">Projets</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="footer__link" id="contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#connect" class="footer__link" id="connect">Connect with me</a>
-                    </li>
-                </ul>
-                <div class="footer__socials">
-                    <a href="mailto:loubnaelattar0@gmail.com" target="__blank" class="footer__social">
-                        <i class="uil uil-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/script.js"></script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-<script type="text/javascript">
-
- let languageContent = {
-  "en": {
-    "home-title": "LOUBNA EL ATTAR",
-    "about-title": "About Me",
-    "nav-home": "Home",
-    "nav-about": "About",
-    "home-subtitle": "AI & Computer Science Student",
-    "home-description": "I'm a student pursuing a dual degree in AI and Computer Science, fueled by a deep passion for the world of Data Science.",
-    "nav-education": "Education",
-    "nav-skills": "Skills",
-    "nav-projects": "Projects",
-    "nav-contact": "Contact Me",
-    "about-descriptionn": "Passionate about the world of data science, I thrive on the challenges it presents and the opportunities it opens up. With an unwavering curiosity and analytical mindset, I am always eager to explore new techniques, datasets, and technologies. Whether it's predictive modeling, machine learning, or data visualization, I find joy in uncovering hidden patterns and telling stories through data.",
-    "master": "Master's in International Computer Science",
-    "isima": "University of Clermont Auvergne, ISIMA",
-    "iagi": "Diplôme d'ingénieur in Artificial Intelligence and Computer Engineering",
-    "ensam": "National School of Arts and Crafts Casablanca, Morocco",
-    "bac": "Baccalaureate degree in Mathematics",
-    "maria": "Madariss Maria High School, Temara, Morocco",
-    "myprojects": "My Projects",
-    "phishing": "Phishing URL Detection",
-    "phishingdesc": "Implemented an ML model to detect phishing URLs, effectively identifying patterns and enhancing online security.",
-    "pillpal": "Robot 'PillPal'",
-    "pillpaldesc": "Created a connected robot equipped with IoT and AI technologies that automatically dispenses pills on time.",
-    "churn": "Employee Churn Prediction with ANN",
-    "churndesc": "Implemented an artificial neural network model to predict employee churn, successfully identifying patterns and factors influencing employees' decisions to leave the organization.",
-    "cvscreening": "CV Screening Recruitment Platform",
-    "cvscreeningdesc": "Developed a recruitment platform focused on CV screening: Optimized the process using NLP.",
-    "penmind": "Blogging Website 'The Pen and the Mind'",
-    "penmindesc": "Developed a blogging website using Angular and Laravel technologies.",
-    "learnit": "JEE e-Learning Website 'Learn IT'",
-    "learnitdesc": "Developed a JEE e-learning website using React and Spring MVC.",
-    "hala": "Website 'Hala 22', 2022 FIFA World Cup in Qatar",
-    "haladesc": "Developed a website for the 2022 FIFA World Cup in Qatar using React.",
-    "contactme": "Contact Me",
-    "gettouch": "Get in Touch",
-    "callme": "Call Me",
-    "contact__icon-email": "Email",
-    "clickhere": "Click here"
-  },
-  "fr": {
-    "home-title": "LOUBNA EL ATTAR",
-    "about-title": "À propos de moi",
-    "nav-home": "Accueil",
-    "nav-about": "À propos",
-    "home-subtitle": "Étudiante en IA & Génie Informatique",
-    "home-description": "Je suis une étudiante poursuivant une double diplômation en France, animée par une profonde passion pour le monde de la Data Science.",
-    "nav-education": "Éducation",
-    "nav-skills": "Compétences",
-    "nav-projects": "Projets",
-    "nav-contact": "Contactez-moi",
-    "about-descriptionn": "Passionnée par le monde de la science des données, je prospère dans les défis qu'il présente et les opportunités qu'il ouvre. Avec une curiosité inébranlable et un esprit analytique, je suis toujours désireuse d'explorer de nouvelles techniques, des ensembles de données et des technologies. Que ce soit la modélisation prédictive, l'apprentissage automatique ou la visualisation des données, je trouve de la joie à découvrir des motifs cachés et à raconter des histoires à travers les données.",
-    "master": "Master en informatique internationale",
-    "isima": "Université de Clermont Auvergne, ISIMA",
-    "iagi": "Diplôme d'ingénieur en Intelligence Artificielle et Génie Informatique",
-    "ensam": "École Nationale Supérieure des Arts et Métiers, Casablanca, Maroc",
-    "bac": "Diplôme du baccalauréat en mathématiques",
-    "maria": "Lycée Madariss Maria, Témara, Maroc",
-    "myprojects": "Mes Projets",
-    "phishing": "Détection des URL de phishing",
-    "phishingdesc": "Mise en œuvre d'un modèle ML pour détecter les URL de phishing, identifiant efficacement des modèles et renforçant la sécurité en ligne.",
-    "pillpal": "Robot 'PillPal'",
-    "pillpaldesc": "Création d'un robot connecté équipé de technologies IoT et IA qui distribue automatiquement des pilules à temps.",
-    "churn": "Prédiction du roulement des employés avec l'ANN",
-    "churndesc": "Mise en œuvre d'un modèle de réseau neuronal artificiel pour prédire le roulement des employés, identifiant avec succès les modèles et les facteurs influençant les décisions des employés de quitter l'organisation.",
-    "cvscreening": "Plateforme de recrutement d'examen de CV",
-    "cvscreeningdesc": "Développement d'une plateforme de recrutement axée sur l'examen de CV : Optimisation du processus à l'aide de la NLP.",
-    "penmind": "Site de blogging 'The Pen and the Mind'",
-    "penmindesc": "Développement d'un site de blogging en utilisant les technologies Angular et Laravel.",
-    "learnit": "Site d'apprentissage JEE 'Learn IT'",
-    "learnitdesc": "Développement d'un site d'apprentissage JEE en utilisant React et Spring MVC.",
-    "hala": "Site web 'Hala 22', Coupe du Monde 2022 au Qatar",
-    "haladesc": "Développement d'un site web pour la Coupe du Monde 2022 au Qatar en utilisant React.",
-    "contactme": "Contactez-moi",
-    "gettouch": "Prenez contact",
-    "callme": "Appelez-moi",
-    "contact__icon-email": "Email",
-    "clickhere": "Appuyez ici"
-  }
-}
-
-
-    let getHome = document.getElementById("nav-home");
-    let getAbout = document.getElementById("nav-about");
-    let getEducation = document.getElementById("nav-education");
-    let getProjects = document.getElementById("nav-projects");
-    let getContact = document.getElementById("nav-contact");
-    let home = document.getElementById("home");
-    let about = document.getElementById("about");
-    let projects = document.getElementById("portfolio");
-    let contact = document.getElementById("contact");
-
- // Function to change the language and update content
- function switchLang(lang) {
-    for (let key in languageContent[lang]) {
-      document.getElementById(key).textContent = languageContent[lang][key];
-    }
-    // Update content based on the selected language
-    for (let link in navigationLinks) {
-      const sectionId = navigationLinks[link];
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.classList.remove('view');
-      }
-    }
-    const selectedLink = document.querySelector('.nav__link.selected');
-    if (selectedLink) {
-      selectedLink.classList.remove('selected');
-    }
-  }
-
-  // Add click event listeners to navigation links
-  for (let link in navigationLinks) {
-    const navLink = document.getElementById(link);
-    if (navLink) {
-      navLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        const sectionId = navigationLinks[link];
-        const section = document.getElementById(sectionId);
-        if (section) {
-          // Close the mobile menu if open
-          document.getElementById('nav-close').click();
-
-          // Scroll to the selected section
-          window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
-
-          // Highlight the selected link
-          const selectedLink = document.querySelector('.nav__link.selected');
-          if (selectedLink) {
-            selectedLink.classList.remove('selected');
-          }
-          navLink.classList.add('selected');
-        }
-      });
-    }
-  }
-</script> -->
-
-
-
-<html lang="en">
-
   <head>
       <meta charset="UTF-8" />
       <meta name ="viewport" content="width = device-width, initial-scale = 1" >
@@ -486,10 +10,7 @@
           crossorigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
-
-<body> 
-	
-	
+<body> 	
     <div class="background gradient">
     </div>
     <div class="page">
@@ -497,7 +18,7 @@
             <nav>
 				<a id = "languageSwitcher">
 				  <button onclick = "switchLang('en')"> English </button>
-				  <button onclick = "switchLang('de')"> French </button>
+				  <button onclick = "switchLang('fr')"> French </button>
 				</a>
 				
                 <a href="#about" class="selected" id='getAbout'>
@@ -516,13 +37,11 @@
                     <span class="fas fa-at"></span>
                     <span class="link" id="mycontact">Contact</span>
                 </a>
-            </nav>
-			
+            </nav>		
         </header>
         <main>
             <section id="presentation" class="profile">
-                <div class="profile-background"></div>
-				
+                <div class="profile-background"></div>				
                 <div>
                     <div class="profile-image">
                         <img src="loubna.jpg" alt="Loubna El Attar">
@@ -546,8 +65,7 @@
                   <p>Passionate about the world of Data Science, I thrive on the challenges it presents and the opportunities it unlocks. 
                     With a relentless curiosity and an analytical mindset, I'm always eager to explore new techniques, datasets, and technologies. 
                     Whether it's predictive modeling, machine learning, or data visualization, I find joy in uncovering hidden patterns and telling stories through data
-						</p>
-                       
+						</p>                
                     </div>
                 </article>
 				<article class="resume-skills">
@@ -562,7 +80,7 @@
                                 </div>
                             </div>
                             <div class="line-down">
-                                <div class="cert" id="german">French </div>
+                                <div class="cert" id="french">French </div>
                                 <div>
                                     <div style="width: 90%"></div>
                                 </div>
@@ -574,23 +92,21 @@
                                 </div>
                             </div>
                             <div>
-                                <div id="hungarian">Arabic</div>
+                                <div id="arabic">Arabic</div>
                                 <div>
                                     <div style="width: 100%"></div>
                                 </div>
                             </div>
                         </section>
                         <section class="line-left">
-                            <h4 class="line-down" id="coding"><i class="fas fa-code"></i> Skills</h4>
-                            
+                            <h4 class="line-down" id="coding"><i class="fas fa-code"></i> Skills</h4>                         
                                 <div>Scikit-learn, TensorFlow, Keras, PyTorch, NLP </div>
 								<div>Database administration and Management </div>
 								<div>Python, R, C, C#, Java, Matlab, UNIX Shell</div>
 								<div>Power BI, Power Apps</div>
                         </section>
                     </div>
-                </article>
-				
+                </article>		
             </section>
             <section id="resume" class="resume">
                 <h3 class="title" id="myResume">Resume</h3>
@@ -626,20 +142,20 @@
                         <h4 class="line-down" id="education"> <i class="fas fa-university"></i> Education</h4>
                         <article class="line-down">
                             <div class="date">2023 - Present</div>
-                            <h5 class="name" id="javadev">M2 ICS</h5>
-                            <h6 class="company" id="hungary">Clermont-Ferrand, France</h6>
+                            <h5 class="name" id="ics">M2 ICS</h5>
+                            <h6 class="company" id="france">Clermont-Ferrand, France</h6>
                             <p id="progma">ISIMA, Clermont Auvergne University</p>
                         </article>
                         <article class="line-down">
                             <div class="date">2019 - Present</div>
                             <h5 class="name" id="businessadm">Diplôme d'Ingénieur in Artificial Intelligence & Computer Engineering</h5>
-                            <h6 class="company" id="colombia">Casablanca, Morocco</h6>
+                            <h6 class="company" id="casa">Casablanca, Morocco</h6>
                             <p>L'Ecole Nationale Supérieure d'Arts et Métiers, Hassan 2 University</p>
                         </article>
                         <article>
                             <div class="date">2019</div>
-                            <h5 class="name" id="bachelor">Baccalaureate in Mathematics</h5>
-                            <h6 class="company" id="hungary1">Temara, Morocco</h6>
+                            <h5 class="name" id="bachelor">Baccalaureate degree in Mathematics</h5>
+                            <h6 class="company" id="temara">Temara, Morocco</h6>
                             <p>Madariss Maria</p>
                         </article>
 						<h4 class="line-down" id="certificates"> <i class="fas fa-university"></i> Some Certificates</h4>
@@ -650,7 +166,7 @@
                         </article>
                         <article class="line-down">
                             <div class="date">2022</div>
-                            <h5 class="name" id="javaback">Teamwork Skills: Communicating Effectively</h5>
+                            <h5 class="name" id="teamwork">Teamwork Skills: Communicating Effectively</h5>
                             <h6 class="company">Coursera</h6>
                         </article>
 						<article class="line-down">
@@ -668,23 +184,23 @@
 						<article class="line-down">
                             <div class="fas fa-link"></div>
                             <h4>Detection of Phishing URLs</h4> 
-                            <p id="testingproject">Implementation of multiple classifiers to detect phishing URLs, effectively identifying patterns and enhancing online security</p>
+                            <p id="phishingproject">Implementation of multiple classifiers to detect phishing URLs, effectively identifying patterns and enhancing online security</p>
                         </article>
                         <article class="line-down">
                             <div class="fas fa-chart-bar"></div>
                             <h4>Employee Churn Prediction using ANN</h4> 
-                            <p id="javaproject">Implementation of an Artificial Neural Network model to predict employee churn, successfully identifying patterns and factors influencing employee decisions to leave the organization.</p>
+                            <p id="churnproject">Implementation of an Artificial Neural Network model to predict employee churn, successfully identifying patterns and factors influencing employee decisions to leave the organization.</p>
                         </article>
 						<article class="line-down">
                             <div class="fas fa-pills"></div>
                             <h4>“PillPal” Robot</h4> 
-                            <p id="htmlproject">Creation of a connected robot endowed with IoT and AI technologies that automatically dispenses pills on time.</p>
+                            <p id="pillpal">Creation of a connected robot endowed with IoT and AI technologies that automatically dispenses pills on time.</p>
                         </article>
                         <article class="line-down">
                             <div class="fas fa-code"></div>
                             <h4>“The Pen and the Mind”, a blogging website</h4> 
 							<a href="https://youtu.be/kFD7UaT58Qk?si=BiS9SfB42-T8BN5o" target="_blank" class="fab fa-youtube"></a>
-                            <p id="sqlproject">Development of a blogging website using Angular and Laravel technologies.</p>
+                            <p id="blogproject">Development of a blogging website using Angular and Laravel technologies.</p>
                         </article>
                         <article class="line-down">
                             <div class="fas fa-code"></div>
@@ -694,10 +210,7 @@
                         </article>
                     </div>
                 </article>
-              
-			  
-            </section>
-			
+            </section>		
             <section id="contact" class="contact">
               <h3 class="title" id="getintouch">Get in Touch</h3>
               <div class="contact-information line-left">
